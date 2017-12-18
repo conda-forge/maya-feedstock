@@ -1,4 +1,4 @@
-{% set version = "0.1.5" %}
+{% set version = "0.3.3" %}
 
 package:
   name: maya
@@ -7,7 +7,7 @@ package:
 source:
   fn: maya-{{ version }}.tar.gz
   url: https://github.com/kennethreitz/maya/archive/v{{ version }}.tar.gz
-  sha256: 397a4f7490385ed541bc0c9a01f2f5e75bb88857f7ef9008ce7d1bcc51600cf2
+  sha256: bad39d8f9c6e2c8f446a2187eafbc2128aa20397787be1e4697bb29b239908f5
   patches:
     - win_encoding.patch  # [win and py3k]
 
