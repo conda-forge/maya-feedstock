@@ -6,7 +6,7 @@ package:
 
 source:
   fn: maya-{{ version }}.tar.gz
-  url: https://github.com/kennethreitz/maya/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/m/maya/maya-0.3.3.tar.gz
   sha256: bad39d8f9c6e2c8f446a2187eafbc2128aa20397787be1e4697bb29b239908f5
   patches:
     - win_encoding.patch  # [win and py3k]
