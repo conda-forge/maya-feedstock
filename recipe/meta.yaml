@@ -1,33 +1,30 @@
-{% set version = "0.1.5" %}
+{% set version = "0.3.3" %}
 
 package:
   name: maya
   version: {{ version }}
 
 source:
-  fn: maya-{{ version }}.tar.gz
-  url: https://github.com/kennethreitz/maya/archive/v{{ version }}.tar.gz
-  sha256: 397a4f7490385ed541bc0c9a01f2f5e75bb88857f7ef9008ce7d1bcc51600cf2
-  patches:
-    - win_encoding.patch  # [win and py3k]
+  url: https://pypi.io/packages/source/m/maya/maya-{{ version }}.tar.gz
+  sha256: bad39d8f9c6e2c8f446a2187eafbc2128aa20397787be1e4697bb29b239908f5
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - humanize
     - pytz
     - dateparser
-    - iso8601
-    - python-dateutil
     - ruamel.yaml
     - tzlocal
+    - pendulum
 
 test:
   imports:
@@ -36,7 +33,7 @@ test:
 about:
   home: https://github.com/kennethreitz/maya
   license: MIT
-  license_file: LICENSE
+  # license_file: LICENSE
   summary: 'Datetimes for Humans.'
 
 extra:
