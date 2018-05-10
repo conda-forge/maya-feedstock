@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: maya
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/maya/maya-{{ version }}.tar.gz
-  sha256: 452e5812c3d5f936a6c8cbea7fc717dcf3ea86d8e58aecb7a057f5f6535dd92e
+  sha256: 2140cb5eb208ea5fa0bfca7a34982ef5764b611b3e7448506cb18499965f086c
 
 build:
   number: 0
