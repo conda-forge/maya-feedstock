@@ -7,19 +7,22 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Datetimes for Humans.
+Summary: Datetimes for Humans
 
 
 
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/maya-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/maya-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/maya-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/maya-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/maya/badges/version.svg)](https://anaconda.org/conda-forge/maya)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/maya/badges/downloads.svg)](https://anaconda.org/conda-forge/maya)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-maya-green.svg)](https://anaconda.org/conda-forge/maya) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/maya.svg)](https://anaconda.org/conda-forge/maya) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/maya.svg)](https://anaconda.org/conda-forge/maya) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/maya.svg)](https://anaconda.org/conda-forge/maya) |
 
 Installing maya
 ===============
