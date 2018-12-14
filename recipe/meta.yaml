@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
     - pytz
     - dateparser >=0.7.0
     - tzlocal
-    - pendulum >=1.0,<=1.5.1
+    - pendulum >=2.0.2
     - snaptime
 
 test:
