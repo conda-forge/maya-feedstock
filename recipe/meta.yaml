@@ -1,27 +1,28 @@
+{% set name = "maya" %}
 {% set version = "0.6.1" %}
 
 package:
-  name: maya
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/maya/maya-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maya-{{ version }}.tar.gz
   sha256: 7f53e06d5a123613dce7c270cbc647643a6942590dba7a19ec36194d0338c3f4
 
 build:
-  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - humanize
     - pytz
-    - dateparser >=0.7.0
+    - dateparser >=0.7.0, !=1.1.0
     - tzlocal
     - pendulum >=2.0.2
     - snaptime
@@ -29,12 +30,16 @@ requirements:
 test:
   imports:
     - maya
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/kennethreitz/maya
+  summary: Datetimes for Humans
   license: MIT
-  license_file: {{ RECIPE_DIR }}/LICENSE
-  summary: 'Datetimes for Humans'
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
