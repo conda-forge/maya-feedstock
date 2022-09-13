@@ -21,7 +21,7 @@ requirements:
     - python
     - humanize
     - pytz
-    - dateparser >=0.7.0
+    - dateparser >=0.7.0, !=1.1.0
     - tzlocal
     - pendulum >=2.0.2
     - snaptime
